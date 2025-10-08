@@ -34,11 +34,14 @@ public class EventBus {
 	 * 发布事件
 	 */
 	public void publish(Event event) {
+		System.out.printf("🔍 [事件总线] 发布事件: %s%n", event.getClass().getSimpleName());
 		Class<? extends Event> eventType = event.getClass();
 		List<EventProcessor> eventProcessors = processors.get(eventType);
 
 		if (eventProcessors != null && !eventProcessors.isEmpty()) {
+			System.out.printf("🔍 [事件总线] 找到 %d 个处理器%n", processors.size());
 			for (EventProcessor processor : eventProcessors) {
+				System.out.printf("🔍 [事件总线] 调用处理器: %s%n", processor.getName());
 				try {
 					if (debugMode) {
 						System.out.printf("[EventBus] 处理事件: %s -> %s%n", eventType.getSimpleName(),
@@ -50,6 +53,8 @@ public class EventBus {
 					e.printStackTrace();
 				}
 			}
+		} else {
+			System.out.printf("❌ [事件总线] 没有找到 %s 的处理器%n", eventType.getSimpleName());
 		}
 	}
 

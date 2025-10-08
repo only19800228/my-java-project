@@ -23,7 +23,7 @@ public class TestDataValidation {
 		dataFeed.setDebugMode(true);
 
 		// 获取数据质量报告
-		DataQualityReport report = dataFeed.getDataService().getDataQualityReport("000001",
+		DataQualityReport report = dataFeed.getDataService().getDataQualityReport("601398",
 				LocalDateTime.of(2023, 1, 1, 0, 0), LocalDateTime.of(2023, 12, 31, 0, 0));
 
 		System.out.println(report.generateReport());

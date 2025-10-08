@@ -53,6 +53,9 @@ public class AKShareDataFeed implements DataFeed {
 	public boolean testConnection() {
 		try {
 			boolean connected = dataService.testConnection();
+			// dataService.setApiToken("cf717df1f1a23819051ffec86c681a0dac5a88a836d3ddc4c2661199");
+			// // 替换为你的真实Token
+
 			if (debugMode) {
 				System.out.println("? AKShare数据服务连接测试: " + (connected ? "成功" : "失败"));
 			}
@@ -125,6 +128,7 @@ public class AKShareDataFeed implements DataFeed {
 	@Override
 	public List<BarEvent> getAllBars() {
 		return new ArrayList<>(bars);
+
 	}
 
 	// 其他现有方法保持不变...
@@ -199,7 +203,7 @@ public class AKShareDataFeed implements DataFeed {
 	 * 备用数据生成
 	 */
 	private List<BarEvent> generateFallbackData(String symbol, LocalDateTime start, LocalDateTime end) {
-		System.out.println("? 使用备用数据生成...");
+		System.err.println("? 使用备用数据生成...");
 		List<BarEvent> fallbackData = new ArrayList<>();
 		Random random = new Random(symbol.hashCode());
 

@@ -37,7 +37,7 @@ public abstract class BaseStrategyTest {
 		assertTrue("数据源连接失败", connected);
 
 		// 基础配置
-		config = new BacktestConfig("000001", LocalDateTime.of(2023, 1, 1, 0, 0), LocalDateTime.of(2023, 6, 30, 0, 0),
+		config = new BacktestConfig("601398", LocalDateTime.of(2024, 1, 1, 0, 0), LocalDateTime.of(2024, 6, 30, 0, 0),
 				100000.0);
 		config.setDebugMode(false);
 	}

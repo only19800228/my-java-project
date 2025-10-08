@@ -40,8 +40,8 @@ public class ComprehensiveIntegrationTest {
 			AKShareDataFeed dataFeed = new AKShareDataFeed();
 			dataFeed.setDebugMode(true);
 
-			BacktestConfig config = new BacktestConfig("000001", LocalDateTime.of(2023, 1, 1, 0, 0),
-					LocalDateTime.of(2023, 6, 30, 0, 0), 100000.0);
+			BacktestConfig config = new BacktestConfig("000001", LocalDateTime.of(2024, 1, 1, 0, 0),
+					LocalDateTime.of(2024, 6, 30, 0, 0), 100000.0);
 
 			EventDrivenBacktestEngine engine = new EventDrivenBacktestEngine(dataFeed, config);
 			EnhancedRSIStrategy strategy = new EnhancedRSIStrategy(14, 70, 30, 0.02);

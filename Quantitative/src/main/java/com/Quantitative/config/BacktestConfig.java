@@ -58,16 +58,16 @@ public class BacktestConfig {
 		return startDate;
 	}
 
-	public void setStartDate(LocalDateTime startDate) {
-		this.startDate = startDate;
+	public void setStartDate(LocalDateTime string) {
+		this.startDate = string;
 	}
 
 	public LocalDateTime getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(LocalDateTime endDate) {
-		this.endDate = endDate;
+	public void setEndDate(LocalDateTime string) {
+		this.endDate = string;
 	}
 
 	public double getInitialCapital() {
@@ -153,4 +153,5 @@ public class BacktestConfig {
 		return String.format("BacktestConfig{symbol='%s', period=%s to %s, capital=%.2f, localFirst=%s}", symbol,
 				startDate.toLocalDate(), endDate.toLocalDate(), initialCapital, preferLocalData);
 	}
+
 }

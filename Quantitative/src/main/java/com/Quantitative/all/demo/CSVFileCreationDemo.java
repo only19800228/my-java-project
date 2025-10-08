@@ -10,7 +10,7 @@ import com.Quantitative.data.csv.CSVDataSource;
 import com.Quantitative.data.validation.DataQualityReport;
 
 /**
- * CSV文件创建和使用演示,同步数据到CSV文件
+ * CSV文件创建和使用演示,同步数据到CSV文件---------------------------------------------------------------
  */
 public class CSVFileCreationDemo {
 
@@ -32,11 +32,12 @@ public class CSVFileCreationDemo {
 
 			// 步骤3: 同步数据到CSV（这会创建文件）
 			System.out.println("\n步骤3: 同步数据到CSV文件");
-			List<String> symbols = Arrays.asList("000001", "000002", "600519", "601985", "600660", "601288", "01658");
+			List<String> symbols = Arrays.asList("601398", "000001", "600660", "601985", "600089", "600079", "300059",
+					"515540");
 
 			for (String symbol : symbols) {
 				System.out.println("\n正在同步: " + symbol);
-				dataManager.syncToCSV(symbol, LocalDateTime.of(2014, 1, 1, 0, 0), LocalDateTime.of(2024, 12, 31, 0, 0));
+				dataManager.syncToCSV(symbol, LocalDateTime.of(2007, 1, 1, 0, 0), LocalDateTime.of(2025, 9, 30, 0, 0));
 			}
 
 			// 步骤4: 列出生成的CSV文件
