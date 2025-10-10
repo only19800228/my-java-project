@@ -112,4 +112,5 @@ public class SignalEvent extends Event {
 				getTimestamp().format(DateTimeFormatter.ISO_LOCAL_DATE), symbol, signalType, getFormattedStrength(),
 				strategyName);
 	}
+
 }

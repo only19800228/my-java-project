@@ -304,4 +304,5 @@ public abstract class BaseStrategy implements TradingComponent {
 	public boolean isInitialized() {
 		return initialized;
 	}
+
 }

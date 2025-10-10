@@ -30,13 +30,6 @@ public class CompleteDataFlowMonitor {
 			AKShareDataService akService = new AKShareDataService();
 			String testSymbol = "601398";
 
-			// 获取原始数据
-			System.out.println("获取AKShare原始数据...");
-			// String rawData = akService.getStockData(testSymbol, "2014-01-01",
-			// "2014-01-10");
-			// System.out.println("原始数据样本: " + (rawData != null ?
-			// rawData.substring(0, Math.min(200, rawData.length())) : "null"));
-
 		} catch (Exception e) {
 			System.out.println("AKShare监控失败: " + e.getMessage());
 		}

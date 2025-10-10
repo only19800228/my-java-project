@@ -305,4 +305,9 @@ public class AKShareDataFeed implements DataFeed {
 		return dataFeed;
 	}
 
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

@@ -762,4 +762,9 @@ public class AKShareDataService {
 			return System.currentTimeMillis() > expiryTime;
 		}
 	}
+
+	public String getStockData(String testSymbol, LocalDateTime localDateTime, LocalDateTime localDateTime2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

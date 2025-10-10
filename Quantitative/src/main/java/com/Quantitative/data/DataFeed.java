@@ -81,4 +81,7 @@ public interface DataFeed extends TradingComponent {
 
 		return report;
 	}
+
+	// List<DataInfo> fetchData(String symbol, String startDate, String
+	// endDate);
 }
